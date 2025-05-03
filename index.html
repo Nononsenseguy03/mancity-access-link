@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jared's Man City Fan Page</title>
+  <style>
+    body {
+      background-color: #6CABDD;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #00285E;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .content {
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .fact-section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #00285E;
+    }
+
+    .vip-section {
+      background-color: #004080;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 1em;
+      margin: 10px 5px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    input {
+      width: 250px;
+    }
+
+    button {
+      background-color: #ffffff;
+      color: #004080;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e6e6e6;
+    }
+
+    #link {
+      display: none;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    a {
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Jared's Man City Fan Page!</h1>
+    <p>By Jared, lifelong Blue 💙</p>
+  </header>
+
+  <div class="content">
+
+    <div class="fact-section">
+      <h2>Top 5 Man City Facts</h2>
+      <ul>
+        <li>Founded in 1880 as St. Mark’s (West Gorton)</li>
+        <li>Moved to the Etihad Stadium in 2003</li>
+        <li>Won the Premier League 9 times (and counting!)</li>
+        <li>Pep Guardiola became manager in 2016</li>
+        <li>First English team to win the domestic treble (2018–19)</li>
+      </ul>
+    </div>
+
+    <div class="fact-section">
+      <h2>Jared’s All-Time Favorite Players</h2>
+      <ul>
+        <li>David Silva – the magician 🎩</li>
+        <li>Yaya Touré – unstoppable engine ⚙️</li>
+        <li>Sergio Agüero – that QPR goal 🥹</li>
+        <li>Vincent Kompany – captain, leader, legend 🛡️</li>
+        <li>Kevin De Bruyne – passing master 🧠</li>
+      </ul>
+    </div>
+
+    <div class="fact-section">
+      <h2>Unforgettable Match Moments</h2>
+      <p>“93:20” still gives me chills. Agüero's goal against QPR in 2012 was pure madness. I was jumping on the sofa screaming like a maniac. You don’t get moments like that anywhere else!</p>
+    </div>
+
+    <div class="vip-section">
+      <h2>VIP Zone 🔐</h2>
+      <p>Enter the secret code to unlock exclusive Man City content (for true fans only):</p>
+
+      <input type="text" id="password" placeholder="Enter secret code" />
+      <button onclick="checkPassword()">Access</button>
+
+      <div id="link">
+        🔓 You did it! <a href="https://drive.google.com/drive/folders/1Q4N5DiCERTd_QqyZCFODfROh8S6ib5lQ?usp=sharing" target="_blank">Click here to view the content</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function normalize(str) {
+      return str.toLowerCase().replace(/\s+/g, '').replace(/[^a-z0-9]/g, '');
+    }
+
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      const cleaned = normalize(input);
+      const accepted = ['proverbs1717'];
+
+      if (accepted.includes(cleaned)) {
+        document.getElementById('link').style.display = 'block';
+      } else {
+        alert('Sorry mate, that’s not the code. Try again!');
+      }
+    }
+  </script>
+
+</body>
+</html>
